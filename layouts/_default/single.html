@@ -5,8 +5,11 @@
 		<div class="content container">
 			<div class="post">
 			 	<h1>{{ .Title }}</h1>
-			  <span class="post-date">{{ .Date.Format "Mon, Jan 2, 2006" }}</span>
+			  <span class="post-date">{{ .Date.Format "2006-01-02(Mon)" }}</span>
+			  {{ partial "sharing.html" . }}
 			      {{ .Content }}
+			  {{ partial "sharing.html" . }}
+			  {{ partial "single_footer.html" . }}
 			</div>
 
 			{{ if and (isset .Site.Params "disqusShortname") (ne .Site.Params.disqusShortname "") }}
