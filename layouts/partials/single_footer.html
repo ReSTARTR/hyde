@@ -1,6 +1,10 @@
  <footer>
-    <p class="meta">
-<span class="byline author vcard">Posted by <span class="fn">{{ .Site.Params.authorName }}</span></span>
-<time datetime="{{ .Date }}" pubdate data-updated="true">{{ .Date.Format "2006-01-02(Mon)" }}</time>
-    </p>
+  <p class="meta">
+    <ul class="params">
+    <li>Category: {{ .Params.categories }}</li>
+    <li class="">Tags: {{ .Params.tags }}</li>
+    <li><span class="byline author vcard">Posted by <span class="fn">{{ .Site.Params.authorName }}</span></span></li>
+    <li><time datetime="{{ .Date }}" pubdate data-updated="true">{{ .Date.Format "2006-01-02(Mon)" }}</time></li>
+    </ul>
+  </p>
 </footer>
